@@ -8,3 +8,5 @@ Two components:
 
   - react
     - a simple little website to host the various files and data with search and filter options.
+
+Site is hosted at: https://ev.appcraft.name/
