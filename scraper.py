@@ -20,8 +20,6 @@ EVO_URL = BASE_URL + '/games/evo/addons?page='
 EVN_URL = BASE_URL + '/games/evn/addons?page='
 DATA_DIR = "./storage/"
 BASE_DATA_FILE = "site-data.json"
-EXTRACTOR = "'.\\Extract Plug-ins.bat'"
-VALID_EXTS = ['zip', 'sit', 'sitx', 'hqx', 'bin', 'rsrc', 'ndat']
 
 # Change to the site to be scraped
 # This updates the url and the data file being uploaded
