@@ -24,15 +24,18 @@ export default class Navbar extends Component {
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                         <Link className="navbar-brand" to="/" onClick={() => this.setState({page: 'evc'})}>EV Addons</Link>
-                        <div className="collapse navbar-collapse">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="Toggle" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="toggle" className="collapse navbar-collapse">
                             <ul className="navbar-nav mr-auto">
-                                <li className={(this.state.page === 'evc') ? "nav-item active" : "nav-item"}>
+                                <li className={(this.state.page === 'evc') ? "nav-item active" : "nav-item"} data-toggle="collapse" data-target="#toggle">
                                     <Link className="nav-link" to="/evc" onClick={() => this.setState({page: 'evc'})}>EV Classic</Link>
                                 </li>
-                                <li className={(this.state.page === 'evo') ? "nav-item active" : "nav-item"}>
+                                <li className={(this.state.page === 'evo') ? "nav-item active" : "nav-item"} data-toggle="collapse" data-target="#toggle">
                                     <Link className="nav-link" to="/evo" onClick={() => this.setState({page: 'evo'})}>EV Override</Link>
                                 </li>
-                                <li className={(this.state.page === 'evn') ? "nav-item active" : "nav-item"}>
+                                <li className={(this.state.page === 'evn') ? "nav-item active" : "nav-item"} data-toggle="collapse" data-target="#toggle">
                                     <Link className="nav-link" to="/evn" onClick={() => this.setState({page: 'evn'})}>EV Nova</Link>
                                 </li>
                             </ul>
