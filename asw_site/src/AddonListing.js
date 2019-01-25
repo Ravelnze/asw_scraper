@@ -4,20 +4,9 @@ import StarRatings from 'react-star-ratings';
 const baseUrl = "https://s3-us-west-2.amazonaws.com/"
 
 export default class AddonListing extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            body: ""
-        }
-    }
-
     componentDidMount() {
         this.props.incrementCounter();
         window.$('[data-toggle="popover"]').popover();
-    }
-
-    componentWillReceiveProps(newProps) {
-        newProps.body.length > 0 ? this.setState({ body: newProps.body }) : this.setState({ body: "No description." })
     }
 
     generateHTML() {
@@ -70,7 +59,7 @@ export default class AddonListing extends Component {
                     </div>
                 </div>
                 <div className="card-body">
-                    <p className="card-text" dangerouslySetInnerHTML={ { __html: this.state.body.replace(/\\/g, '') } }></p>
+                    <p className="card-text" dangerouslySetInnerHTML={ { __html: this.props.body.length > 0 ? this.props.body.replace(/\\/g, '') : "No description." } }></p>
                 </div>
             </div>
         )
