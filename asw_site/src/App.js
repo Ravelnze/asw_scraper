@@ -76,7 +76,7 @@ export default class App extends Component {
           <div className="row pt-3">
             <div className="col">
               <div className="d-flex justify-content-center">
-                <img src={this.state.banner} alt="Escape Velocity Banner"></img>
+                <img src={this.state.banner} className="img-fluid" alt="Escape Velocity Banner"></img>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default class App extends Component {
           <div className="row pt-3">
             <div className="col">
               <div className="d-flex justify-content-center">
-                <div className="btn-group btn-group-sm" role="group" aria-label="Category buttons">
+                <div className="btn-group btn-group-sm flex-wrap" role="group" aria-label="Category buttons">
                   <button type="button" className={this.state.category === "" ? "btn btn-light active" : "btn btn-light"} onClick={() => this.categoryHandler("")}>All</button>
                   <button type="button" className={this.state.category === "plugins" ? "btn btn-light active" : "btn btn-light"} onClick={() => this.categoryHandler("plugins")}>Plugins</button>
                   <button type="button" className={this.state.category === "cheats" ? "btn btn-light active" : "btn btn-light"} onClick={() => this.categoryHandler("cheats")}>Cheats</button>
