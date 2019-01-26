@@ -14,9 +14,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://evaddons",
+    "deploy": "aws s3 sync build/ s3://evaddons --delete",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E1KX62L4WI0AS8 --paths /"
   },
   "eslintConfig": {
     "extends": "react-app"
