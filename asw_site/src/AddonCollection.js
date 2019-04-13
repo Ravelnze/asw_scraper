@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddonListing from './AddonListing.js';
+import customAdditions from './customAdditions.json'
 
 export default class AddonCollection extends Component {
     constructor(props) {
@@ -15,9 +16,15 @@ export default class AddonCollection extends Component {
     componentWillMount() {
         fetch("https://s3-us-west-2.amazonaws.com/ambrosiaevn/" + this.props.url + "-site-data.json")
         .then( (response) => {
-            return response.json() 
+            return response.json();
         })
-        .then( (json) => {
+        .then( (siteData) => {
+            var json = siteData;
+            if(customAdditions[this.props.url].length > 0) {
+                customAdditions[this.props.url].forEach(addon => {
+                    json.push(addon);
+                });
+            }
             this.setState({
                 data: json, 
                 filtered: json
@@ -69,6 +76,7 @@ export default class AddonCollection extends Component {
                     <AddonListing title={addon.title}
                         size={addon.size}
                         author={addon.author}
+                        custom_url={addon.custom_url}
                         s3_url={addon.s3_url}
                         upload_date={addon.upload_date}
                         category={addon.category}
