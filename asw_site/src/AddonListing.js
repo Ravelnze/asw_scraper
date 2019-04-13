@@ -22,7 +22,7 @@ export default class AddonListing extends Component {
                             <div className="row">
                                 <div className="col">
                                     <h5 className="mb-0">
-                                        <a href={baseUrl + this.props.s3_url}>{this.props.title}</a>
+                                        <a href={this.props.s3_url != null ? baseUrl + this.props.s3_url : this.props.custom_url}>{this.props.title}</a>
                                     </h5>
                                 </div>
                             </div>
