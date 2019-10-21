@@ -348,6 +348,21 @@
             "star_rating": "0",
             "download_count": "0",
             "body": ""
+        },
+        {
+            "title": "EVO: Expanded",
+            "file_name": "EVOExpanded.zip",
+            "size": "13.1 MB",
+            "author": "Chris Paff",
+            "download_url": "",
+            "s3_url": "ambrosiaevn/addons/evn/EVOExpanded.zip",
+            "content_type": "application/zip",
+            "upload_date": "21/10/2019",
+            "category": "Plugins",
+            "votes": "0",
+            "star_rating": "0",
+            "download_count": "0",
+            "body": "EVO: Expanded is a plug-in for Guy's port of EV Override for Nova that blends with and expands upon the stock EVO scenario. It adds more stories, updates balance, and adds various new features, many of which are only possible with the Nova engine. If you have feedback etc, I'd be happy to hear from you - my email is paff00@gmail.com - Chris Paff, a.k.a. \"Mag Steelglass\""
         }
     ]
 }
