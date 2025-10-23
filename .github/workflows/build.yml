@@ -38,4 +38,4 @@ jobs:
           push: true
           context: ./asw_site
           file: ./asw_site/Dockerfile
-          tags: ghcr.io/${{ env.OWNER_LC }}/ti-helper:latest
+          tags: ghcr.io/${{ env.OWNER_LC }}/ev-addons:latest
